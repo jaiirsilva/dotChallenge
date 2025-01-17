@@ -1,0 +1,31 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Ou a versão que você estiver usando
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run Cypress tests
+      run: |
+        npm run cy:run  # Este comando assume que você tem um script no package.json chamado "cy:run"
