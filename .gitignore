@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+
+# Logs
+*.log
+
+# Dependências de build
+dist/
+build/
+
+# Arquivos de configuração do editor
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*~
+*.swp
